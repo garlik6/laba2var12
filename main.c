@@ -5,7 +5,7 @@
 int fun(int n,int *p,int *k);
 int insert_checking(int n,int p);
 
-
+void sort()
 int fun(int n,int *p,int *k) {
     int s=0;
     *p=1;
@@ -45,8 +45,9 @@ int main() {
            do {
                 printf("insert %d element\n",i);
                 p=scanf("%d",&mas1[i]);
+                fflush (stdin);
             }
-           while(insert_checking(mas1[i])!=1,p);
+           while(insert_checking(mas1[i],p)!=1);
 
     }
     for(i=0;i<size;i++) {
